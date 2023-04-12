@@ -34,7 +34,7 @@ spec:
           spring-boot-convention/app-live-view-appflavours-boot
         developer.conventions/target-containers: workload
         kubectl.kubernetes.io/last-applied-configuration: |
-          {"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"annotations":{},"labels":{"app.kubernetes.io/part-of":"where-for-dinner-notify","apps.tanzu.vmware.com/auto-configure-actuators":"true","apps.tanzu.vmware.com/has-tests":"true","apps.tanzu.vmware.com/workload-type":"web","networking.knative.dev/visibility":"cluster-local"},"name":"where-for-dinner-notify","namespace":"medium"},"spec":{"build":{"env":[{"name":"BP_MAVEN_BUILD_ARGUMENTS","value":"-P native -Dmaven.test.skip=true --no-transfer-progress package"},{"name":"BP_JVM_VERSION","value":"17"}]},"params":[{"name":"gitops_repository","value":"https://github.com/vipinms2/where-for-dinner-notify-medium"},{"name":"gitops_ssh_secret","value":"git-ssh"},{"name":"annotations","value":{"autoscaling.knative.dev/maxScale":"4","autoscaling.knative.dev/target":"200"}}],"resources":{"limits":{"cpu":"1000m","memory":"750M"},"requests":{"cpu":"100m","memory":"500M"}},"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/vipinms2/where-for-dinner-mc-longevityaks94.git"},"subPath":"where-for-dinner-notify"}}}
+          {"apiVersion":"carto.run/v1alpha1","kind":"Workload","metadata":{"annotations":{},"labels":{"app.kubernetes.io/part-of":"where-for-dinner-notify","apps.tanzu.vmware.com/auto-configure-actuators":"true","apps.tanzu.vmware.com/has-tests":"true","apps.tanzu.vmware.com/workload-type":"web","networking.knative.dev/visibility":"cluster-local"},"name":"where-for-dinner-notify","namespace":"medium"},"spec":{"build":{"env":[{"name":"BP_MAVEN_BUILD_ARGUMENTS","value":"-P native -Dmaven.test.skip=true --no-transfer-progress package"},{"name":"BP_JVM_VERSION","value":"17"}]},"params":[{"name":"gitops_repository","value":"https://github.com/vipinms2/where-for-dinner-notify-medium"},{"name":"gitops_ssh_secret","value":"git-ssh"},{"name":"annotations","value":{"autoscaling.knative.dev/maxScale":"4","autoscaling.knative.dev/target":"200"}}],"resources":{"limits":{"cpu":"1000m","memory":"750M"},"requests":{"cpu":"100m","memory":"500M"}},"source":{"git":{"ref":{"branch":"main"},"url":"https://github.com/vipinms2/where-for-dinner-mc-longevityaks95.git"},"subPath":"where-for-dinner-notify"}}}
       labels:
         app.kubernetes.io/component: run
         app.kubernetes.io/part-of: where-for-dinner-notify
@@ -54,7 +54,7 @@ spec:
       - env:
         - name: JAVA_TOOL_OPTIONS
           value: -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details="always" -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include="*" -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080"
-        image: taplongevity.azurecr.io/tapalong/where-for-dinner-notify-medium@sha256:15471b58c7026b8bcc59bf204b2635b252f520338130dffc80c793eec311777c
+        image: taplongevity.azurecr.io/tapalong/where-for-dinner-notify-medium@sha256:1b4ad5ce221a69bd621e1c6d58fffa38ba69aa1582217b48066d8914616b94f2
         livenessProbe:
           httpGet:
             path: /livez
